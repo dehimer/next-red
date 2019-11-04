@@ -9,6 +9,7 @@ const Layout = props => (
     <Bottom />
     <img src={BGImage} alt=""/>
 
+    { /*language=CSS*/ }
     <style jsx>{`
         .layout {
           background: linear-gradient(0.4turn, #a81e23, #781214 30%, #781214);
@@ -26,11 +27,13 @@ const Layout = props => (
         }
     `}
     </style>
+    { /*language=CSS*/ }
     <style jsx global>{`
       body {
         margin: 0;
         padding: 0;
         background-color: #781214;
+        font-family: "Roboto Mono Medium for Powerline", sans-serif;
       }
     `}
     </style>
