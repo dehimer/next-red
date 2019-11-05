@@ -19,6 +19,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-markdown": "^4.2.2",
+    "react-share": "^3.0.1",
     "styled-jsx": "^3.2.3"
   }
 }

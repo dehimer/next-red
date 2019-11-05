@@ -1,50 +1,60 @@
+import { withRouter } from 'next/router';
+
 import Link from 'next/link';
+
+import {
+  FacebookShareButton,
+  VKShareButton,
+  OKShareButton,
+} from 'react-share';
 
 import vk from './vk.svg';
 import fb from './fb.svg';
 import ok from './ok.svg';
 
-const Bottom = () => (
-  <div className="bottom">
-    <div className="header">
-      ПОДЕЛИТЬСЯ:
-    </div>
-    <div className="buttons">
-      <Link href="/">
-        <a><img src={vk} alt="VK Share"/></a>
-      </Link>
-      <Link href="/">
-        <a><img src={fb} alt="FB Share"/></a>
-      </Link>
-      <Link href="/">
-        <a><img src={ok} alt="OK Share"/></a>
-      </Link>
-    </div>
 
-    { /*language=CSS*/ }
-    <style jsx>{`
-      .bottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header {
-        font-size: 20px;
-        color: #e6cdad;
-      }
-      .buttons {
-        display: flex;
-      }
-      .buttons a {
-        cursor: pointer;
-      }
-      .buttons img {
-        max-height: 50px;
-        margin: 7px;
-      }
-    `}</style>
-  </div>
-);
+const Bottom = ({ router }) => {
+  const url = `http://музейподоткрытымнебом.рф/${router.path}`;
+  return (
+    <div className="bottom">
+      <div className="header">
+        ПОДЕЛИТЬСЯ:
+      </div>
+      <div className="buttons">
+        <VKShareButton url={url}>
+          <img src={vk} alt="VK Share"/>
+        </VKShareButton>
+        <FacebookShareButton url={url}>
+          <img src={fb} alt="FB Share"/>
+        </FacebookShareButton>
+        <OKShareButton url={url}>
+          <img src={ok} alt="OK Share"/>
+        </OKShareButton>
+      </div>
 
-export default Bottom;
+      { /*language=CSS*/ }
+      <style jsx>{`
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header {
+      font-size: 20px;
+      color: #e6cdad;
+    }
+    .buttons {
+      display: flex;
+    }
+    .buttons img {
+      max-height: 50px;
+      margin: 7px;
+      cursor: pointer;
+    }
+  `}</style>
+    </div>
+  )
+};
+
+export default withRouter(Bottom);
