@@ -24,8 +24,8 @@ const Layout = (props) => (
         <style jsx>{`
             .layout {
               background: linear-gradient(0.4turn, #a81e23, #781214 30%, #781214);
-              width: 100vw;
-              max-width: 500px;
+              width: 500px;
+              max-width: 100vw;
               height: 100vh;
               margin: 0 auto;
               display: flex;
@@ -34,8 +34,9 @@ const Layout = (props) => (
             
             img {
                 width: 500px;
+                max-width: 100vw;
+                position: fixed;
                 bottom: 0;
-                position: absolute;
                 opacity: 0.07;
                 pointer-events: none;
             }

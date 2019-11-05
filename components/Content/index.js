@@ -11,7 +11,7 @@ const Content = (props) => (
     </div>
 
     { /*language=CSS*/ }
-    <style jsx>{`
+    <style jsx>{`      
       .title {
         color: white;
         font-size: 60px;
@@ -25,7 +25,8 @@ const Content = (props) => (
         align-items: center;
       }
       .image img {
-        max-width: 400px;
+        width: 400px;
+        max-width: 80%;
         border: 4px solid white;
       }
       
