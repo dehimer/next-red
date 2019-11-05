@@ -1,14 +1,3 @@
-import Layout from '../components/Layout';
+import Azp39 from './azp39';
 
-export default function Blog() {
-  return (
-    <Layout>
-      <div>
-        Content will be here
-      </div>
-      <style jsx>{`
-        
-      `}</style>
-    </Layout>
-  );
-}
+export default Azp39;

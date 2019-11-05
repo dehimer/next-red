@@ -1,14 +1,19 @@
 import Header from '../Header';
+import Content from '../Content';
 import Bottom from '../Bottom';
 import BGImage from './bg.png';
 
-const Layout = props => (
+const Layout = (props) => (
     <div className="layout">
         <div className="header" >
-            <Header/>
+            <Header />
         </div>
         <div className="content">
-            {props.children}
+            <Content
+              title={props.title}
+              image={props.image}
+              text={props.children}
+            />
         </div>
         <div className="bottom">
             <Bottom />
@@ -23,6 +28,8 @@ const Layout = props => (
               max-width: 500px;
               height: 100vh;
               margin: 0 auto;
+              display: flex;
+              flex-direction: column;
             }
             
             img {
@@ -38,7 +45,7 @@ const Layout = props => (
             }
             
             .content {
-                height: 72%;
+
             }
             
             .bottom {
