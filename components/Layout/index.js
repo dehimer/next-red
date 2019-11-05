@@ -37,11 +37,11 @@ const Layout = props => (
             }
             
             .content {
-                height: 65%;
+                height: 72%;
             }
             
             .bottom {
-                height: 20%;
+                height: 13%;
             }
         `}
         </style>
