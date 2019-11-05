@@ -21,7 +21,9 @@ const Layout = (props) => {
           title={props.title}
           image={props.image}
           text={props.children}
-          setShow={() => setShow(true)}
+          setShow={() => {
+            setShow(true);
+          }}
         />
       </div>
       <div className="bottom">
