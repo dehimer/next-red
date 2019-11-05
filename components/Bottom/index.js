@@ -12,7 +12,8 @@ import ok from './ok.svg';
 
 
 const Bottom = ({ router }) => {
-  const url = `http://музейподоткрытымнебом.рф/${router.path}`;
+  const url = `http://музейподоткрытымнебом.рф/${router.pathname}`;
+
   return (
     <div className="bottom">
       <div className="header">
