@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from '../Header';
 import Content from '../Content';
@@ -7,6 +7,16 @@ import BGImage from './bg.png';
 
 const Layout = (props) => {
   const [show, setShow] = useState(false);
+  let timer = setTimeout(() => setShow(true), 1000);
+
+  useEffect(
+    () => {
+      return () => {
+        clearTimeout(timer)
+      }
+    },
+    [show]
+  );
 
   return (
     <div className="layout" style={{
@@ -21,9 +31,6 @@ const Layout = (props) => {
           title={props.title}
           image={props.image}
           text={props.children}
-          setShow={() => {
-            setShow(true);
-          }}
         />
       </div>
       <div className="bottom">

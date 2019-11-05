@@ -8,7 +8,6 @@ const Content = (props) => {
         <img
           src={props.image}
           alt={`${props.title} Фото`}
-          onLoad={props.setShow}
         />
       </div>
       <div className="text">
