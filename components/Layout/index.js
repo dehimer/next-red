@@ -1,27 +1,36 @@
+import React, { useState } from 'react';
+
 import Header from '../Header';
 import Content from '../Content';
 import Bottom from '../Bottom';
 import BGImage from './bg.png';
 
-const Layout = (props) => (
-    <div className="layout">
-        <div className="header" >
-            <Header />
-        </div>
-        <div className="content">
-            <Content
-              title={props.title}
-              image={props.image}
-              text={props.children}
-            />
-        </div>
-        <div className="bottom">
-            <Bottom />
-        </div>
-        <img src={BGImage} alt="" />
+const Layout = (props) => {
+  const [show, setShow] = useState(false);
 
-        { /*language=CSS*/ }
-        <style jsx>{`
+  return (
+    <div className="layout" style={{
+      visibility: show ? 'visible': 'hidden',
+      backgroundColor: '##781214',
+    }}>
+      <div className="header" >
+        <Header />
+      </div>
+      <div className="content">
+        <Content
+          title={props.title}
+          image={props.image}
+          text={props.children}
+          setShow={() => setShow(true)}
+        />
+      </div>
+      <div className="bottom">
+        <Bottom />
+      </div>
+      <img src={BGImage} alt="" />
+
+      { /*language=CSS*/ }
+      <style jsx>{`
             .layout {
               background: linear-gradient(0.4turn, #a81e23, #781214 30%, #781214);
               width: 500px;
@@ -53,9 +62,9 @@ const Layout = (props) => (
                 height: 13%;
             }
         `}
-        </style>
-        { /*language=CSS*/ }
-        <style jsx global>{`
+      </style>
+      { /*language=CSS*/ }
+      <style jsx global>{`
           body {
             margin: 0;
             padding: 0;
@@ -63,9 +72,10 @@ const Layout = (props) => (
             font-family: "Roboto Mono Medium for Powerline", sans-serif;
           }
         `}
-        </style>
+      </style>
 
     </div>
-);
+  )
+};
 
 export default Layout;

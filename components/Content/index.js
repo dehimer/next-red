@@ -1,17 +1,22 @@
-const Content = (props) => (
-  <div className="content">
-    <div className="title">
-      {props.title}
-    </div>
-    <div className="image">
-      <img src={props.image} alt=""/>
-    </div>
-    <div className="text">
-      {props.text}
-    </div>
+const Content = (props) => {
+  return (
+    <div className="content">
+      <div className="title">
+        {props.title}
+      </div>
+      <div className="image">
+        <img
+          src={props.image}
+          alt={`${props.title} Фото`}
+          onLoad={props.setShow}
+        />
+      </div>
+      <div className="text">
+        {props.text}
+      </div>
 
-    { /*language=CSS*/ }
-    <style jsx>{`      
+      { /*language=CSS*/ }
+      <style jsx>{`      
       .title {
         color: white;
         font-size: 60px;
@@ -38,7 +43,8 @@ const Content = (props) => (
         font-family: sans-serif;
       }
     `}</style>
-  </div>
-);
+    </div>
+  )
+};
 
 export default Content;
