@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import vk from './vk.svg';
 import fb from './fb.svg';
 import ok from './ok.svg';
@@ -8,10 +10,17 @@ const Bottom = () => (
       ПОДЕЛИТЬСЯ:
     </div>
     <div className="buttons">
-      <img src={vk} alt="VK Share"/>
-      <img src={fb} alt="FB Share"/>
-      <img src={ok} alt="OK Share"/>
+      <Link href="/">
+        <a><img src={vk} alt="VK Share"/></a>
+      </Link>
+      <Link href="/">
+        <a><img src={fb} alt="FB Share"/></a>
+      </Link>
+      <Link href="/">
+        <a><img src={ok} alt="OK Share"/></a>
+      </Link>
     </div>
+
     { /*language=CSS*/ }
     <style jsx>{`
       .bottom {
@@ -23,6 +32,12 @@ const Bottom = () => (
       .header {
         font-size: 20px;
         color: #e6cdad;
+      }
+      .buttons {
+        display: flex;
+      }
+      .buttons a {
+        cursor: pointer;
       }
       .buttons img {
         max-height: 50px;

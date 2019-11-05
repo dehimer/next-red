@@ -30,6 +30,7 @@ const Layout = props => (
                 bottom: 0;
                 position: absolute;
                 opacity: 0.07;
+                pointer-events: none;
             }
             
             .header {
