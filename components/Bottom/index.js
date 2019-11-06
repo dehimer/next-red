@@ -27,7 +27,6 @@ const Bottom = ({ image, title, text, router }) => {
           url={url}
           image={imageUrl}
           title={title}
-          description={text}
         >
           <img src={vk} alt="VK Share"/>
         </VKShareButton>
@@ -38,7 +37,6 @@ const Bottom = ({ image, title, text, router }) => {
           url={url}
           image={imageUrl}
           title={title}
-          description={text}
         >
           <img src={ok} alt="OK Share"/>
         </OKShareButton>

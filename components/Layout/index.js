@@ -30,6 +30,7 @@ const Layout = (props) => {
         <Content
           title={props.title}
           image={props.image}
+          text={props.children.te}
         />
       </div>
       <div className="bottom">
