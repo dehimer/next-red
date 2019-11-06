@@ -13,7 +13,7 @@ import ok from './ok.svg';
 
 const Bottom = ({ router }) => {
   const url = `http://музейподоткрытымнебом.рф/${router.pathname}`;
-
+  console.log(url);
   return (
     <div className="bottom">
       <div className="header">
@@ -33,25 +33,25 @@ const Bottom = ({ router }) => {
 
       { /*language=CSS*/ }
       <style jsx>{`
-    .bottom {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header {
-      font-size: 20px;
-      color: #e6cdad;
-    }
-    .buttons {
-      display: flex;
-    }
-    .buttons img {
-      max-height: 50px;
-      margin: 7px;
-      cursor: pointer;
-    }
-  `}</style>
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .header {
+          font-size: 20px;
+          color: #e6cdad;
+        }
+        .buttons {
+          display: flex;
+        }
+        .buttons img {
+          max-height: 50px;
+          margin: 7px;
+          cursor: pointer;
+        }
+    `}</style>
     </div>
   )
 };
