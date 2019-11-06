@@ -30,14 +30,12 @@ const Layout = (props) => {
         <Content
           title={props.title}
           image={props.image}
-          text={props.children}
         />
       </div>
       <div className="bottom">
         <Bottom
           image={props.image}
           title={props.title}
-          text={props.children}
         />
       </div>
       <img src={BGImage} alt="" />
