@@ -12,7 +12,7 @@ import ok from './ok.svg';
 
 
 const Bottom = ({ router }) => {
-  const url = `http://музейподоткрытымнебом.рф/${router.pathname}`;
+  const url = `http://музейподоткрытымнебом.рф${router.pathname}`;
   console.log(url);
   return (
     <div className="bottom">
