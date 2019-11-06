@@ -11,22 +11,35 @@ import fb from './fb.svg';
 import ok from './ok.svg';
 
 
-const Bottom = ({ router }) => {
+const Bottom = ({ image, title, text, router }) => {
   const url = `http://музейподоткрытымнебом.рф${router.pathname}`;
   console.log(url);
+  const imageUrl = `http://музейподоткрытымнебом.рф/${image}`;
+  console.log(imageUrl);
+
   return (
     <div className="bottom">
       <div className="header">
         ПОДЕЛИТЬСЯ:
       </div>
       <div className="buttons">
-        <VKShareButton url={url}>
+        <VKShareButton
+          url={url}
+          image={imageUrl}
+          title={title}
+          description={text}
+        >
           <img src={vk} alt="VK Share"/>
         </VKShareButton>
         <FacebookShareButton url={url}>
           <img src={fb} alt="FB Share"/>
         </FacebookShareButton>
-        <OKShareButton url={url}>
+        <OKShareButton
+          url={url}
+          image={imageUrl}
+          title={title}
+          description={text}
+        >
           <img src={ok} alt="OK Share"/>
         </OKShareButton>
       </div>

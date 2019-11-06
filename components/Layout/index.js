@@ -34,7 +34,11 @@ const Layout = (props) => {
         />
       </div>
       <div className="bottom">
-        <Bottom />
+        <Bottom
+          image={props.image}
+          title={props.title}
+          text={props.children}
+        />
       </div>
       <img src={BGImage} alt="" />
 
