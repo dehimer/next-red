@@ -13,13 +13,3 @@ Run by now:
 3. npm i
 4. npm run build
 5. npm run start
-
-
-ToDo:
-1. Layout
-2. Header
-3. Bottom
-4. Content
-5. Header content
-6. Bottom content
-7. Pages content
